@@ -1,0 +1,11 @@
+FROM ghostscript:latest
+
+EXPOSE 3333
+
+WORKDIR /opt/app-root
+
+RUN npm i -g nx
+
+COPY . .
+
+CMD npm run
