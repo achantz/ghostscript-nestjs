@@ -31,7 +31,7 @@ export class FileCompressionInterceptor implements NestInterceptor {
               fileName
             );
             console.log;
-            const args = `-q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dPDFSETTINGS=/ebook -dEmbedAllFonts=true -dSubsetFonts=true -dAutoRotatePages=/None -dColorImageDownsampleType=/Bicubic -dColorImageResolution=72 -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=72 -dMonoImageDownsampleType=/Subsample -dMonoImageResolution=72 -sOutputFile=${outputPath}.pdf ${file.path}`;
+            const args = `-q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dPDFSETTINGS=/ebook -dEmbedAllFonts=true -dSubsetFonts=true -dAutoRotatePages=/None -dColorImageDownsampleType=/Bicubic -dColorImageResolution=72 -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=72 -dMonoImageDownsampleType=/Subsample -dMonoImageResolution=72 -sOutputFile=${outputPath} ${file.path}`;
             console.log(`Starting: GhostScript v${version}`);
             console.log(`Input File: ${file.path}`);
             console.log(`Output File: ${outputPath}`);
