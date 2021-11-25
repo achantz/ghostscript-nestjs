@@ -81,7 +81,8 @@ fi
 if [ "$NODE_ENV" != "production" ]; then
 
 	echo "---> Building your Node application from source"
-  npm i -g nx
+  npm install -g nx
+  npm install -g node-gyp
 	npm install
 
 else
